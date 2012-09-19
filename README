@@ -1,0 +1,9 @@
+this was a quick proof-of-concept for pretzlik films
+it uses a 1 pages html template
+to show a portfolio of films and images
+with an about section
+
+I started building a basic cms framework to allow dropping in editable content using velocity as a template engine...
+
+
+This file was modified by IntelliJ IDEA 11.1.3 for binding GitHub repository
