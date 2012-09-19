@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <import resource="classpath:client/jdbc.spring.xml" />
+
+    <bean id="dataController" class="kizwid.web.DataController">
+        <constructor-arg ref="jdbcTemplate"/>
+    </bean>
+
+    <!-- you can have more than one handler defined -->
+    <bean id="urlMapping"
+          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="urlMap">
+            <map>
+                <entry key="/service/data">
+                    <ref bean="dataController"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+</beans>

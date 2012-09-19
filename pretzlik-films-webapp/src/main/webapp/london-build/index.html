@@ -1,0 +1,69 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LondonBuild</title>
+
+<meta name="description" content="LondonBuild complete building project management">
+<meta name="keywords" content="loft conversions, kitchen, bathroom, refurbishment">
+<meta name="distribution" content="GLOBAL">
+<meta name="copyright" content="copyright(c) londonbuild">
+<meta name="owner" content="sean">
+<meta name="author" content="www.londonbuild.com)">
+<meta name="language" content="en-gb">
+<meta name="robots" content="index,follow">
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript">
+
+var vComment = new Array(10);
+vComment[0] = "very cute";
+vComment[1] = "looks interesting";
+vComment[2] = "this is George";
+
+
+function current_slide( slideshow_id, slide_index ){		
+	document.getElementById('current_slide').innerHTML='image index[' + slide_index + '] ' + vComment[slide_index];
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header"><image src='images/logo.gif'/>LondonBuild 0800 100 200</div>
+
+<div id="nav_left" class="nav_left">This will be the navigation 'column', which will run down the left of the page.</div>
+
+<div class="blurb">some info about each slide: 
+  <div id="current_slide"></div>
+</div>
+
+<div class="slides">
+
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+	codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" 
+	WIDTH="785" 
+	HEIGHT="350" 
+	id="slideshow">
+<PARAM NAME="movie" VALUE="tools/slideshow.swf?xml_source=slides.xml&slideshow_id=slideshow" />
+<PARAM NAME="quality" VALUE="high" />
+<PARAM NAME="bgcolor" VALUE="#000000" />
+<param name="allowScriptAccess" value="sameDomain" />
+
+<EMBED src="tools/slideshow.swf?xml_source=slides.xml&slideshow_id=slideshow" 
+	quality="high" 
+	bgcolor="#000000" 
+	WIDTH="785" 
+	HEIGHT="350" 
+	NAME="slideshow" 
+	allowScriptAccess="sameDomain" 
+	swLiveConnect="true" 
+	TYPE="application/x-shockwave-flash" 
+	PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
+</EMBED>
+</OBJECT>
+
+</div>
+
+</body></html>

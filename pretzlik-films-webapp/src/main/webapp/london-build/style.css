@@ -1,0 +1,45 @@
+.header {
+	position: absolute; 
+	left: 120px; 
+	top: 10px; 
+	width: 785px; 
+	height: 20px; 
+	padding: 15px;
+	font-size: 13pt;
+	color: white; 
+}
+.nav_left {
+	color: white; 
+	position: absolute; 
+	left: 0px; 
+	top: 80px; 
+	width: 100px; 
+	height: 350px; 
+	padding: 15px; 
+	padding-right: 20px;
+}	
+.slides {
+	position: absolute; 
+	left: 120px; 
+	top: 80px; 
+	background-color: powderblue; 
+	width: 785px; 
+	height: 350px; 
+	padding: 15px;
+}
+.blurb {
+	z-index: 2;
+	position: absolute; 
+	left: 120px; 
+	top: 430px; 
+	background-color: powderblue; 
+	width: 785px; 
+	height: 30px; 
+	padding: 15px;
+	color: white; 
+	border: white;
+}
+body {
+     background-image: url(images/back-tile.png);
+     background-repeat: repeat;
+}

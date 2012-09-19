@@ -1,0 +1,62 @@
+<project name="pretzlik-films" default="all" basedir=".">
+
+  <property name="dist.path" value="target"/>
+
+  <target name="init">
+     <tstamp>
+      <format property="time_stamp" pattern="yyyyMMdd-HHmm"/>
+     </tstamp>
+  </target>
+
+  <target name="all" depends="src">
+     <echo message="---------------------"/>
+     <echo message="-"/>
+     <echo message="-   all"/>
+     <echo message="-"/>
+     <echo message="---------------------"/>
+  </target>
+
+  <target name="clean">
+     <echo message="---------------------"/>
+     <echo message="-"/>
+     <echo message="-   clean"/>
+     <echo message="-"/>
+     <echo message="---------------------"/>
+     <delete dir="${dist.path}/src-bundle" />
+  </target>
+
+  <target name="src" depends="clean,init"
+	  description="Jar up source code">
+
+    <delete dir="${dist.path}/${ant.project.name}" />
+    <mkdir          dir="${dist.path}"/>
+
+    <copy todir="${dist.path}/src-bundle/${ant.project.name}">
+      <fileset dir="${basedir}" defaultexcludes="yes">
+        <include name="**/**"/>
+        <exclude name="**/*.iml"/>
+        <exclude name="**/.idea/**"/>
+        <exclude name="**/.svn/**"/>
+        <exclude name="**/.git/**"/>
+        <exclude name="**/target/**"/>
+        <exclude name="**/out/**"/>
+      </fileset>
+    </copy>
+
+    <!-- Create source-code JAR file -->
+    <jar jarfile="${dist.path}/${ant.project.name}-${time_stamp}.src.jar">
+      <fileset dir="${dist.path}/src-bundle/${ant.project.name}" defaultexcludes="yes"/>
+    </jar>
+
+    <!-- uue to text -->
+    <exec command="uuencode">
+        <arg value="-o"/>
+        <arg value="${dist.path}/${ant.project.name}-${time_stamp}.src.jar.uue" />
+        <arg value="${dist.path}/${ant.project.name}-${time_stamp}.src.jar" />
+        <arg value="${ant.project.name}-${time_stamp}.src.jar"/>
+    </exec>
+
+  </target>
+
+
+</project>

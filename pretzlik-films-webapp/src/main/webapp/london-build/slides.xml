@@ -1,0 +1,24 @@
+<slideshow>
+
+   <!-- show the control bar -->
+   <control bar_visible='on' />
+
+   <slide>
+      <!-- the image to display in the first slide -->
+      <image url='images/slides/slide0.jpg' duration='120' />
+      <transition type='push_right' duration='1' />
+   </slide>
+   
+   <slide>
+      <!-- the image to display in the second slide -->
+      <image url='images/slides/slide1.jpg' duration='120'/>
+      <transition type='push_right' duration='1' />
+   </slide>
+
+   <slide>
+      <!-- the image to display in the second slide -->
+      <image url='images/slides/slide2.jpg' duration='120'/>
+      <transition type='push_right' duration='1' />
+   </slide>
+
+</slideshow>
