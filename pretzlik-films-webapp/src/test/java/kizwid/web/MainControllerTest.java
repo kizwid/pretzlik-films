@@ -68,7 +68,7 @@ public class MainControllerTest {
     @Test
     public void runForever() throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(1);
-        //latch.await();
+        latch.await();
     }
 
 
